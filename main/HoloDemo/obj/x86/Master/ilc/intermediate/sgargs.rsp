@@ -1,0 +1,10 @@
+/out:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\intermediate\SgGenerated\\"
+/int:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\intermediate\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\intermediate\PreMergeILTransformed\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\intermediate\TransformedSRWR\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\in\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\in\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\in\\"
+/ref:"C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\x86\ilc\lib\Private\\"
+/ref:"G:\SVN\HoloDemo\main\HoloDemo\obj\x86\Master\ilc\in\WinMetadata\\"
+/ca:System.Private.CoreLib

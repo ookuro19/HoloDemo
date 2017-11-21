@@ -1,0 +1,17 @@
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\bin\x86\Master\Assembly-CSharp-firstpass.dll
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\bin\x86\Master\Assembly-CSharp-firstpass.pdb
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\bin\x86\Master\Assembly-CSharp-firstpass.pri
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\Assembly-CSharp-firstpass.dll
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\Assembly-CSharp-firstpass.pdb
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\priconfig.xml
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\priconfig.xml.intermediate
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\layout.resfiles
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\layout.resfiles.intermediate
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\resources.resfiles
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\resources.resfiles.intermediate
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\pri.resfiles
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\pri.resfiles.intermediate
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\qualifiers.txt
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\qualifiers.txt.intermediate
+G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\obj\x86\Master\x86\Master\MultipleQualifiersPerDimensionFound.txt

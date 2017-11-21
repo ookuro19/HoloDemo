@@ -1,0 +1,1 @@
+G:\SVN\HoloDemo\WindowsStoreApp\HoloDemo\HoloDemo.csproj;x86
