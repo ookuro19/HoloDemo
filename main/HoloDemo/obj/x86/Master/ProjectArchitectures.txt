@@ -1,4 +1,0 @@
-G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
-G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
-G:\SVN\HoloDemo\main\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
-G:\SVN\HoloDemo\main\HoloDemo\HoloDemo.csproj;x86
