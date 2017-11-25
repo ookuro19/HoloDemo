@@ -54,7 +54,7 @@ namespace HoloToolkit.Unity.InputModule
             bool spawnControllers = false;
 
 #if UNITY_2017_2_OR_NEWER
-            spawnControllers = !XRDevice.isPresent;
+            spawnControllers =   !XRDevice.isPresent;
 #else
             spawnControllers = !VRDevice.isPresent;
 #endif
@@ -64,7 +64,7 @@ namespace HoloToolkit.Unity.InputModule
                 sourceNumber = InputSourceNumber.Two;
             }
 
-            if (!spawnControllers) { return; }
+            if (!spawnControllers) { Debug.Log(spawnControllers ? "true" : "false");  return; }
 
             switch (sourceType)
             {
@@ -82,14 +82,16 @@ namespace HoloToolkit.Unity.InputModule
                         newLeftInputSource.transform.SetParent(transform);
                         Inputs.Add(newLeftInputSource);
                     }
+                    
                     break;
                 case InputSourceType.Mouse:
                     GameObject newMouseInputSource = Instantiate(mouse);
                     newMouseInputSource.transform.SetParent(transform);
                     Inputs.Add(newMouseInputSource);
-
+                    Debug.Log(" InputSourceType.Mouse ");
                     break;
                 default:
+                    Debug.Log(" ArgumentOutOfRangeException ");
                     throw new ArgumentOutOfRangeException();
             }
         }
