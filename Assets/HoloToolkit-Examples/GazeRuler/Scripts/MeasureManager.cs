@@ -13,8 +13,9 @@ namespace HoloToolkit.Examples.GazeRuler
     /// <summary>
     /// manager all measure tools here
     /// </summary>
-    public class MeasureManager : Singleton<MeasureManager>, IHoldHandler, IInputClickHandler
+    public class MeasureManager : Singleton<MeasureManager>, IInputClickHandler  , IHoldHandler
     {
+     
         private IGeometry manager;
         public GeometryMode Mode;
 
@@ -104,11 +105,21 @@ namespace HoloToolkit.Examples.GazeRuler
             // Nothing to do
         }
 
-    public void OnInputClicked(InputClickedEventData eventData)
-    {
-        OnSelect();
+        public void OnInputClicked(InputClickedEventData eventData)
+        {
+            if (eventData.selectedObject)
+            {
+                Debug.Log(eventData.selectedObject.name);
+
+            }
+            else
+            {
+                Debug.Log("selectedObject is null");
+            }
+           // OnSelect();
+        }
     }
-}
+    
 
     public class Point
     {
