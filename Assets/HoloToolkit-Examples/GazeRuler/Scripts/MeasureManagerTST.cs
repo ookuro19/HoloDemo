@@ -3,34 +3,30 @@
 
 using UnityEngine;
 using System.Collections;
-using HoloToolkit.Unity;
 using System.Collections.Generic;
 using System;
 using HoloToolkit.Unity.InputModule;
 
-namespace HoloToolkit.Examples.GazeRuler
+public class MeasureManagerTST : MonoBehaviour, IInputClickHandler
 {
-    /// <summary>
-    /// manager all measure tools here
-    /// </summary>
-    public class MeasureManagerTST : MonoBehaviour, IInputClickHandler
+    public GameObject tstCube;
+
+    private void Start()
     {
-        private void Start()
+        InputManager.Instance.PushFallbackInputHandler(gameObject);
+    }
+
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        if (eventData.selectedObject)
         {
-            InputManager.Instance.PushFallbackInputHandler(gameObject);
+            Debug.Log(eventData.selectedObject.name);
+
         }
-
-        public void OnInputClicked(InputClickedEventData eventData)
+        else
         {
-            if (eventData.selectedObject)
-            {
-                Debug.Log(eventData.selectedObject.name);
-
-            }
-            else
-            {
-                Debug.Log("selectedObject is null");
-            }
+            Debug.Log("selectedObject is null");
+            tstCube.SetActive(!tstCube.activeSelf);
         }
     }
 }
