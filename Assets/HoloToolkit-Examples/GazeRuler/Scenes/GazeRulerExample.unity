@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -109,8 +109,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &55036824
 GameObject:
@@ -121,7 +119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 55036826}
   - component: {fileID: 55036825}
-  - component: {fileID: 55036827}
   m_Layer: 0
   m_Name: Measure Manager
   m_TagString: Untagged
@@ -135,16 +132,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55036824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74b108b9b117b7e4a99657e352d1e27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Mode: 0
-  LinePrefab: {fileID: 0}
-  PointPrefab: {fileID: 0}
-  ModeTipObject: {fileID: 0}
-  TextPrefab: {fileID: 0}
+  LinePrefab: {fileID: 1000013919465970, guid: 24292e31cfee75844898d532649e8003, type: 2}
+  PointPrefab: {fileID: 1000012130063850, guid: cfe406a44797d604981e0039a8d07127,
+    type: 2}
+  ModeTipObject: {fileID: 2107812362}
+  TextPrefab: {fileID: 1000011564080456, guid: 730f1ee216d682046871e9b19d634fcf, type: 2}
 --- !u!4 &55036826
 Transform:
   m_ObjectHideFlags: 0
@@ -160,22 +158,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55036827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 55036824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c829ad372cddeba408213f92205bde0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mode: 0
-  LinePrefab: {fileID: 0}
-  PointPrefab: {fileID: 0}
-  ModeTipObject: {fileID: 0}
-  TextPrefab: {fileID: 0}
 --- !u!1001 &578223433
 Prefab:
   m_ObjectHideFlags: 0
@@ -402,10 +384,6 @@ Prefab:
       propertyPath: TrianglesPerCubicMeter
       value: 450
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010302963436, guid: 2ed75ffdf9031c94e8bce4b3d17b9928, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ed75ffdf9031c94e8bce4b3d17b9928, type: 2}
   m_IsPrefabParent: 0
@@ -500,10 +478,6 @@ Prefab:
         type: 2}
       propertyPath: m_Color.rgba
       value: 4291377990
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011564080456, guid: 730f1ee216d682046871e9b19d634fcf, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 730f1ee216d682046871e9b19d634fcf, type: 2}
