@@ -130,7 +130,7 @@ namespace HoloToolkit.Unity.InputModule
         protected override void Awake()
         {
             base.Awake();
-
+            DebugDrawRay = true;
             // Add default RaycastLayers as first layerPriority
             if (RaycastLayerMasks == null || RaycastLayerMasks.Length == 0)
             {
