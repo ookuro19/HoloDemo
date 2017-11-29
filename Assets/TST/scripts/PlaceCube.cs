@@ -115,8 +115,8 @@ public class PlaceCube : MonoBehaviour, IInputClickHandler
         if (SpatialMappingRaycast(cameraTransform.position, cameraTransform.forward, out targetHitInfo))
         {
             placementPosition = targetHitInfo.point;
-            Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0);
-           
+            placementRotation = Quaternion.FromToRotation(Vector3.forward, targetHitInfo.normal);
+
         }
         else
         {
