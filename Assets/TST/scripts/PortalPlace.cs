@@ -33,7 +33,7 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
     /// Useful when you want to place an object immediately.
     /// </summary>
     [Tooltip("Setting this to true will enable the user to move and place the object in the scene without needing to tap on the object. Useful when you want to place an object immediately.")]
-    public bool IsBeingPlaced;
+	private bool IsBeingPlaced;
 
     [Tooltip("Setting this to true will allow this behavior to control the DrawMesh property on the spatial mapping.")]
     public bool AllowMeshVisualizationControl = true;
@@ -42,7 +42,8 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
     private static RaycastHit targetHitInfo;
     private Vector3 placementPosition;
     private Quaternion placementRotation;
-
+	//Surrounding detect ray's range
+	private float randomRange;
     private Interpolator interpolator;
 
 
@@ -65,14 +66,8 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
 
 		IsBeingPlaced = false;
 
-        if (IsBeingPlaced)
-        {
-            StartPlacing();
-        }
-        else // If we are not starting out with actively placing the object, give it a World Anchor
-        {
-            AttachWorldAnchor();
-        }
+        StartPlacing();
+
     }
 
     /// <summary>
@@ -108,6 +103,7 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
         {
             placementPosition = targetHitInfo.point;
 			placementRotation = Quaternion.FromToRotation(Vector3.forward, targetHitInfo.normal);
+			GenerateEnvPlants (placementPosition, placementRotation);
         }
         else
         {
@@ -132,27 +128,18 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
         interpolator.SetTargetRotation(placementRotation);
     }
 
-    public virtual void OnInputClicked(InputClickedEventData eventData)
+    public void OnInputClicked(InputClickedEventData eventData)
     {
-        StopPlacing();
+		if (!IsBeingPlaced) {
+			StopPlacing();
+		}
     }
-
-    private void HandlePlacement()
-    {
-        if (IsBeingPlaced)
-        {
-            StartPlacing();
-        }
-        else
-        {
-            StopPlacing();
-        }
-    }
+		
     private void StartPlacing()
     {
         var layerCacheTarget = PlaceParentOnTap ? ParentGameObjectToPlace : gameObject;
         layerCacheTarget.SetLayerRecursively(IgnoreRaycastLayer, out layerCache);
-        InputManager.Instance.PushModalInputHandler(gameObject);
+        //InputManager.Instance.PushModalInputHandler(gameObject);
         ToggleSpatialMesh();
         RemoveWorldAnchor();
     }
@@ -161,8 +148,8 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
     {
         var layerCacheTarget = PlaceParentOnTap ? ParentGameObjectToPlace : gameObject;
         layerCacheTarget.ApplyLayerCacheRecursively(layerCache);
-        InputManager.Instance.PopModalInputHandler();
-
+        //InputManager.Instance.PopModalInputHandler();
+		IsBeingPlaced = false;
         ToggleSpatialMesh();
         AttachWorldAnchor();
     }
@@ -233,4 +220,28 @@ public class PortalPlace : MonoBehaviour, IInputClickHandler
         }
         return headPosition + gazeDirection * defaultGazeDistance;
     }
+
+	private void GenerateEnvPlants(Vector3 tPosition, Quaternion tRotation)
+	{
+		//Check if there is a object
+		if (IsSurroundingGOExist(tPosition)) {
+			Instantiate (EnvGOList [Random.Range (0, EnvGOList.Count - 1)], tPosition, tRotation);
+		}
+	}
+
+	private bool IsSurroundingGOExist(Vector3 tPosition)
+	{
+		randomRange = Random.Range (1f, 3f);
+		if (!Physics.Raycast(tPosition,Vector3.up,randomRange)) {
+			if (!Physics.Raycast(tPosition,Vector3.down,randomRange)) {
+				if (!Physics.Raycast(tPosition,Vector3.right,randomRange)) {
+					if (!Physics.Raycast(tPosition,Vector3.left,randomRange)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
 }
