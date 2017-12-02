@@ -142,6 +142,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -157,6 +158,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -174,6 +176,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -189,6 +192,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -265,10 +269,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PersistentKeywords: 1
   RecognizerStart: 0
-  RecognitionConfidenceLevel: 1
   Keywords:
   - Keyword: Scene Launcher
     KeyCode: 8
+  recognitionConfidenceLevel: 1
 --- !u!114 &114669922776097872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,8 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneMapping:
-  - ScenePath: Assets/HoloToolkit-Examples/SceneLauncher/SceneLauncher.unity
-    IsButtonEnabled: 1
+  - ScenePath: Assets/TST/SpatialMappingTST.unity
+    IsButtonEnabled: 0
   ButtonSpawnLocation: {fileID: 1899756416056624}
   SceneButtonPrefab: {fileID: 114712049552519426, guid: c943b5508bd87f347a6d36c5ca46424c,
     type: 2}
@@ -314,7 +318,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
   IsGlobalListener: 1
   PersistentKeywords: 1

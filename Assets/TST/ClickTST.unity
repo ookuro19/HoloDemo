@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 55036826}
-  - component: {fileID: 55036827}
+  - component: {fileID: 55036825}
   m_Layer: 0
   m_Name: ClickTST
   m_TagString: Untagged
@@ -128,6 +128,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &55036825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55036824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01dfb0e5d736b1343b9ef5320bab945e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tstCube: {fileID: 2123944970}
 --- !u!4 &55036826
 Transform:
   m_ObjectHideFlags: 0
@@ -141,18 +153,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55036827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 55036824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c829ad372cddeba408213f92205bde0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tstCube: {fileID: 2123944970}
 --- !u!1 &288761399
 GameObject:
   m_ObjectHideFlags: 0
